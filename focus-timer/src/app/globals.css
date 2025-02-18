@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #3b82f6; /* Tailwind Blue */
+  --secondary: #9333ea; /* Tailwind Purple */
+  --accent: #ec4899; /* Tailwind Pink */
+  --font-sans: 'Arial', 'Helvetica', sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--foreground);
+  background: var(--background);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Utility for full height screens */
+.full-height {
+  height: 100vh;
+}
