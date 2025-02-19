@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,10 +22,19 @@
         "name": "next"
       }
     ],
+    "baseUrl": "./",  // Add baseUrl here
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]  // Add the alias mapping here
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/timer/TimerDisplay.jsx", "src/components/timer/TimerControls.jsx", "src/components/common/Card.jsx", "src/app/page.jsx", "src/app/layout.jsx", "src/components/common/Button.jsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    "src/**/*",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

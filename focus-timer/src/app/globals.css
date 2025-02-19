@@ -29,3 +29,71 @@ body {
 .full-height {
   height: 100vh;
 }
+
+/* Timer Progress Bar */
+svg {
+  transform: rotate(90deg); /* Rotate to start at the top */
+}
+
+circle {
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+/* Button Styles */
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* Start Button */
+button.start {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+}
+
+button.start:hover {
+  background-color: #567fda; /* Darker shade of blue */
+}
+
+/* Pause Button */
+button.pause {
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+}
+
+button.pause:hover {
+  background-color: #7c3aed; /* Darker shade of purple */
+}
+
+/* Reset Button */
+button.reset {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+}
+
+button.reset:hover {
+  background-color: #f43f5e; /* Darker shade of pink */
+}
+
+/* Timer Display */
+.timer-display {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  transition: color 0.3s ease;
+}
+
+.timer-display.running {
+  color: black;
+}
+
+.timer-display.paused,
+.timer-display.idle {
+  color: var(--primary);
+}
+
